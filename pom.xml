@@ -50,7 +50,17 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>3.1.2</version>
         </dependency>
-<!--uses to show all beans that supplied by Spring-->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.8</version>
+        </dependency>
     </dependencies>
 
 

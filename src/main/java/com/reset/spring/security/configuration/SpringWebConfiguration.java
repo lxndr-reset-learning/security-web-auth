@@ -3,6 +3,7 @@ package com.reset.spring.security.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan(basePackages = "com.reset.spring.security")
 @EnableWebMvc
+@PropertySource("classpath:logging.properties")
 public class SpringWebConfiguration {
     /**
      * This method is used to define the Bean for ViewResolver in Spring MVC.

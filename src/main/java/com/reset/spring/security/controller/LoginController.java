@@ -1,21 +1,22 @@
-package com.reset.spring.security.configuration.controller;
+package com.reset.spring.security.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LoginController {
-    @GetMapping("/")
+    @RequestMapping("/")
     public String getInfoForAllEmpls() {
         return "view_for_all_employees";
     }
 
-    @GetMapping("/hr_info")
+    @RequestMapping("/hr_info")
     public String getInfoOnlyForHR() {
         return "view_for_hr";
     }
 
-    @GetMapping("/manager_info")
+    @RequestMapping("/manager_info")
     public String getInfoOnlyForManagers() {
         return "view_for_managers";
     }

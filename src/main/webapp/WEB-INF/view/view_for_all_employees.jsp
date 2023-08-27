@@ -1,27 +1,31 @@
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%--
-  Created by IntelliJ IDEA.
-  User: lxndr
+  This page is created by IntelliJ IDEA.
+  Author: lxndr
   Date: 8/26/2023
   Time: 12:41 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <title>Employee Information</title>
 </head>
-<body>
-<h3>Information for all employees</h3>
-<br>
-<br>
-<input type="button" value="Salary" onclick="window.location.href='hr_info'"/>
-<br>
-Only for HR staff
+    <body>
+    <h3>Information for All Employees</h3>
+    <br>
 
-<br>
-<br>
-<input type="button" value="Performance" onclick="window.location.href='manager_info'"/>
-<br>
-Only for managers
-</body>
+<!-- Section for HR Role -->
+    <security:authorize access="hasRole('HR')">
+        <input type="button" value="Salary" onclick="window.location.href='hr_info'"/>
+        <p>This section is only accessible for HR employees</p>
+    </security:authorize>
+
+    <br>
+
+<!-- Section for Manager Role -->
+    <security:authorize access="hasRole('MANAGER')">
+        <input type="button" value="Performance" onclick="window.location.href='manager_info'"/>
+        <p>This section is only accessible for managers</p>
+    </security:authorize>
+    </body>
 </html>

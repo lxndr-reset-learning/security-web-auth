@@ -1,4 +1,4 @@
-# Spring Security In-Memory Authentication Project
+# Spring Security In-Database Authentication Project
 
 This is a Java-based Spring MVC project learning that uses the Spring Security module to secure web applications. It utilizes in-memory user authentication, including role-based access.
 
@@ -6,7 +6,7 @@ This is a Java-based Spring MVC project learning that uses the Spring Security m
 
 - **Spring Security Configuration**: Configures the necessary components to secure the web application with Spring Security. This includes methods for setting up the authentication manager and defining in-memory user credentials.
 
-- **In-Memory User Authentication**: Seeded with a set of users each with defined roles ('EMPLOYEE', 'HR', 'MANAGER'). User credentials and roles are configured on startup and stored in-memory.
+- **In-Database User Authentication**: Seeded with a set of users each with defined roles ('EMPLOYEE', 'HR', 'MANAGER'). User credentials and roles are configured on startup and stored in database.
 
 - **BCrypt Password Encoder**: Encrypts user passwords for secure storage using BCrypt's $2A version.
 
